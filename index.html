@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">📝 BlogSpace</h1>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    🌙
+                </button>
+                <button id="add-blog-btn" class="btn btn-primary">
+                    ➕ Add New Blog
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search and Filter Section -->
+            <section class="search-filter-section">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="🔍 Search blogs by title or tags..." 
+                        class="search-input"
+                    >
+                </div>
+                <div class="filter-container">
+                    <select id="category-filter" class="filter-select">
+                        <option value="">All Categories</option>
+                    </select>
+                    <button id="clear-filters" class="btn btn-secondary">Clear Filters</button>
+                </div>
+            </section>
+
+            <!-- Blog Stats -->
+            <section class="stats-section">
+                <div class="stats-card">
+                    <span class="stats-number" id="total-blogs">0</span>
+                    <span class="stats-label">Total Blogs</span>
+                </div>
+                <div class="stats-card">
+                    <span class="stats-number" id="total-categories">0</span>
+                    <span class="stats-label">Categories</span>
+                </div>
+            </section>
+
+            <!-- Blog Posts Container -->
+            <section class="blogs-section">
+                <div id="blogs-container" class="blogs-grid">
+                    <!-- Blog posts will be dynamically inserted here -->
+                </div>
+                <div id="no-blogs-message" class="no-blogs-message" style="display: none;">
+                    <div class="empty-state">
+                        <div class="empty-icon">📝</div>
+                        <h3>No blogs found</h3>
+                        <p>Create your first blog post to get started!</p>
+                        <button class="btn btn-primary" onclick="openAddBlogModal()">
+                            Create Blog Post
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Add/Edit Blog Modal -->
+    <div id="blog-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Add New Blog Post</h2>
+                <button class="modal-close" id="close-modal">&times;</button>
+            </div>
+            <form id="blog-form" class="blog-form">
+                <div class="form-group">
+                    <label for="blog-title">Title *</label>
+                    <input type="text" id="blog-title" required>
+                    <span class="error-message" id="title-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="blog-author">Author *</label>
+                    <input type="text" id="blog-author" required>
+                    <span class="error-message" id="author-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="blog-category">Category *</label>
+                    <input type="text" id="blog-category" required placeholder="e.g., Technology, Lifestyle, Travel">
+                    <span class="error-message" id="category-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="blog-tags">Tags</label>
+                    <input type="text" id="blog-tags" placeholder="e.g., javascript, web development, coding (separate with commas)">
+                    <small>Separate multiple tags with commas</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="blog-content">Content *</label>
+                    <textarea id="blog-content" rows="8" required placeholder="Write your blog content here..."></textarea>
+                    <span class="error-message" id="content-error"></span>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="save-btn">Save Blog</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2>Confirm Delete</h2>
+                <button class="modal-close" id="close-delete-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this blog post? This action cannot be undone.</p>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancel-delete">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirm-delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
