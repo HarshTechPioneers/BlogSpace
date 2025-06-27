@@ -24,10 +24,7 @@ This repository contains blog posts created using **HTML, CSS, and JavaScript**.
 - Optional: EmailJS, AOS.js (for animations)
 
 ---
-Check out the live version of the project here:  
-👉 [Live Demo]( https://harshtechpioneers.github.io/ShoeStore_Website/)
 
----
 ## 🙋‍♂️ About Me
 
 Hi, I'm **Harsh Raj** — a passionate front-end developer and B.Tech student committed to building beautiful, responsive, and user-centric web experiences. I enjoy turning ideas into real-world projects using modern technologies like HTML, CSS, and JavaScript.  
@@ -35,7 +32,12 @@ This shoe store website reflects my dedication to clean design, interactivity, a
 
 ## 🤝 Connect with Me
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/harshraj94/) 
+- 💼 [LinkedIn](https://www.linkedin.com/in/harshraj94/)
+---
 
+## Check out the live version of the project here:  
+👉 [Live Demo](https://harshtechpioneers.github.io/BlogSpace/)
+
+---
 👨‍💻 Created by **Harsh Raj** | @HarshTechPioneers
 
